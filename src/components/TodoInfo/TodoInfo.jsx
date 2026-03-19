@@ -9,7 +9,6 @@ export const TodoInfo = ({ todo }) => (
     })}
   >
     <h2 className="TodoInfo__title">{todo.title}</h2>
-
-    <UserInfo user={todo.user} key={todo.user.id} />
+    {todo.user ? <UserInfo user={todo.user} /> : ''};
   </article>
 );
